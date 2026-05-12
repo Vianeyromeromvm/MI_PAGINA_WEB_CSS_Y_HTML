@@ -1,0 +1,140 @@
+/* --- HOJA DE ESTILOS EXTERNA - PROYECTO CONALEP --- */
+/* Módulo: DEWE-20 | Alumno: Vianney Romero García */
+
+/* --- 1. TIPOGRAFÍA Y TEXTO (Indicador 30%) --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* font-family[span_4](start_span)[span_4](end_span) */
+    font-size: 11pt;                            /* font-size[span_5](start_span)[span_5](end_span) */
+    line-height: 1.6;                           /* line-height[span_6](start_span)[span_6](end_span) */
+    color: #333;
+    background-color: #f4f9f7;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #006633;
+    font-weight: bold;                          /* font-weight[span_7](start_span)[span_7](end_span) */
+    font-variant: small-caps;                   /* font-variant[span_8](start_span)[span_8](end_span) */
+    text-align: center;                         /* text-align[span_9](start_span)[span_9](end_span) */
+}
+
+/* Pseudo-elemento para Letra Capital (Criterio Excelente) */
+.capital-text::first-letter, .introduccion::first-letter {
+    font-size: 3.5em;                           /* font-size[span_10](start_span)[span_10](end_span) */
+    font-weight: bold;
+    color: #006633;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;                             /* first-letter[span_11](start_span)[span_11](end_span) */
+}
+
+p {
+    text-indent: 20px;                          /* text-indent[span_12](start_span)[span_12](end_span) */
+    letter-spacing: 0.5px;                      /* letter-spacing[span_13](start_span)[span_13](end_span) */
+    word-spacing: 1px;                          /* word-spacing[span_14](start_span)[span_14](end_span) */
+    white-space: normal;                        /* white-space[span_15](start_span)[span_15](end_span) */
+}
+
+/* --- 2. ENLACES E HIPERVÍNCULOS (Indicador 30%) --- */
+a {
+    text-decoration: none;                      /* text-decoration[span_16](start_span)[span_16](end_span) */
+    font-style: italic;                         /* font-style[span_17](start_span)[span_17](end_span) */
+    transition: 0.3s;
+}
+
+/* Estados del enlace (Pseudo-clases) */
+a:link { color: #006633; }                      /* :link[span_18](start_span)[span_18](end_span) */
+a:visited { color: #004422; }                   /* :visited[span_19](start_span)[span_19](end_span) */
+a:hover {                                       /* :hover[span_20](start_span)[span_20](end_span) */
+    color: #009944;
+    text-decoration: underline;
+}
+a:active { color: #ff0000; }                    /* :active[span_21](start_span)[span_21](end_span) */
+
+/* Enlace tipo botón con icono (background) */
+.enlace-boton, .btn-nav {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006633;
+    color: white !important;
+    border-radius: 5px;
+    font-style: normal;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0id2hpdGUiIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZD0iTTggMy4yOTNsNiA2VjE0YTEgMSAwIDAgMS0xIDFILTlhMSAxIDAgMCAxLTEtMVY5LjI5M2w2LTZ6Ii8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    padding-left: 30px;                         /* background-image[span_22](start_span)[span_22](end_span) */
+}
+
+/* --- 3. LISTAS (Indicador 30%) --- */
+ul {
+    list-style-type: square;                    /* list-style-type[span_23](start_span)[span_23](end_span) */
+    list-style-image: none;                     /* list-style-image[span_24](start_span)[span_24](end_span) */
+    list-style: inside square;                  /* list-style shorthand[span_25](start_span)[span_25](end_span) */
+}
+
+/* --- 4. TABLAS (Indicador 30%) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;                  /* border-collapse[span_26](start_span)[span_26](end_span) */
+    border-spacing: 0;                          /* border-spacing[span_27](start_span)[span_27](end_span) */
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    vertical-align: middle;                     /* vertical-align[span_28](start_span)[span_28](end_span) */
+}
+
+/* Filas con color alterno (Aspecto mejorado) */
+tr:nth-child(even) {
+    background-color: #e6f2ed;                  /* Color a filas[span_29](start_span)[span_29](end_span) */
+}
+
+caption {
+    caption-side: bottom;                       /* caption-side[span_30](start_span)[span_30](end_span) */
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* --- 5. FORMULARIOS (Indicador 30%) --- */
+fieldset {
+    border: 2px solid #006633;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.campo-formulario, .form-group {
+    margin-bottom: 15px;                        /* Alineación con div[span_31](start_span)[span_31](end_span) */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Pseudo-clase focus para resaltar campo activo */
+input:focus, textarea:focus, select:focus {
+    background-color: #f0fff0;
+    border: 2px solid #006633;
+    outline: none;                              /* :focus[span_32](start_span)[span_32](end_span) */
+}
+
+/* Botón que parece enlace */
+.btn-enviar, .btn-as-link {
+    background: none;
+    border: none;
+    color: #006633;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 11pt;                            /* Botón como enlace[span_33](start_span)[span_33](end_span) */
+}
